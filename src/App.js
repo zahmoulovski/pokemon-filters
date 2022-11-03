@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./styles.css";
 import { buttons } from "./data";
 import { getPokemon, filterPokemon } from "../services/services";
+import "./styles.css";
+
 export default function App() {
   const [filtredPokemon, setFiltredPokemon] = useState(null);
   useEffect(() => {
@@ -27,7 +28,7 @@ export default function App() {
         ))}
 
       {filtredPokemon &&
-        filtredPokemon.map(type => (
+        filtredPokemon.map((type) => (
           <ul key={type.id}>
             <li>{type.nome}</li>
           </ul>
