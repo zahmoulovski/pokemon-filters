@@ -1,49 +1,45 @@
-export const pokemons = [
+export const videos = [
   {
     id: 1,
-    nome: "Eevee",
-    tipo: "normal",
+    title: "Eevee",
+    genre: "movie",
     registro: 133,
-    CP: 300
-  },
-  {
-    id: 2,
-    nome: "Charmander",
-    tipo: "fire",
-    registro: 123,
-    CP: 500
-  },
-  {
-    id: 3,
-    nome: "Charizard",
-    tipo: "fire",
-    registro: 123,
-    CP: 500
+    CP: 300,
   },
   {
     id: 4,
-    nome: "Pikachu",
-    tipo: "eletric",
+    title: "Charmander",
+    genre: "tvshow",
+    registro: 123,
+    CP: 500,
+  },
+  {
+    id: 3,
+    title: "Charizard",
+    genre: "movie",
+    registro: 123,
+    CP: 500,
+  },
+  {
+    id: 2,
+    title: "Pikachu",
+    genre: "tvshow",
     registro: 63,
-    CP: 350
-  }
+    CP: 350,
+  },
 ];
 
 export const buttons = [
   {
     name: "All",
-    value: "all"
+    value: "all",
   },
   {
-    name: "Fire",
-    value: "fire"
+    name: "Movie",
+    value: "movie",
   },
   {
-    name: "Normal",
-    value: "normal"
+    name: "TV Show",
+    value: "tvshow",
   },
-  {
-    name: "Electric",
-    value: "eletric"
-  }
 ];
