@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { buttons } from "./data";
-import { getPokemon, filterPokemon } from "../services/services";
+import { getVideo, filterVideo } from "./services";
 import "./styles.css";
 
 export default function App() {
-  const [filtredPokemon, setFiltredPokemon] = useState(null);
+  const [filtredVideo, setFiltredVideo] = useState(null);
   useEffect(() => {
-    setFiltredPokemon(getPokemon());
+    setFiltredVideo(getVideo());
   }, []);
 
-  function handlePokemon(e) {
-    let typePokemon = e.target.value;
-    typePokemon !== "all"
-      ? setFiltredPokemon(filterPokemon(typePokemon))
-      : setFiltredPokemon(getPokemon());
+  function handleVideo(e) {
+    let typeVideo = e.target.value;
+    typeVideo !== "all"
+      ? setFiltredVideo(filterVideo(typeVideo))
+      : setFiltredVideo(getVideo());
   }
 
   return (
@@ -21,16 +21,16 @@ export default function App() {
       {buttons &&
         buttons.map((type, index) => (
           <>
-            <button key={index} value={type.value} onClick={handlePokemon}>
+            <button key={index} value={type.value} onClick={handleVideo}>
               {type.name}
             </button>
           </>
         ))}
 
-      {filtredPokemon &&
-        filtredPokemon.map((type) => (
+      {filtredVideo &&
+        filtredVideo.map((type) => (
           <ul key={type.id}>
-            <li>{type.nome}</li>
+            <li>{type.title}</li>
           </ul>
         ))}
     </>
